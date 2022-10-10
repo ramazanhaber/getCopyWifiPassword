@@ -13,16 +13,11 @@ namespace getCopyWifiPassword
         public Form1()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(0, 0);
-            this.Visible = false;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.Form.CheckForIllegalCrossThreadCalls = false;//threadlarda çakışma olursa ben hallederim
-
 
             string wifiName = getWifiName();
             string password = getCopyWifiPassWord(wifiName);
